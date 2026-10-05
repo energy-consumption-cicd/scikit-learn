@@ -18,8 +18,9 @@ BASELINE_GATE_MAX_PKG_W=1.0
 BASELINE_GATE_EXIT=90
 ENERGY_BASELINE_GATE="${ENERGY_BASELINE_GATE:-on}"
 # Pre-registered ceilings per stage; 91 is outside the declared exits, like 90.
+# Addendum 2026-10-04: ceilings recomputed by the single ceiling rule, the larger of 1.5 times and 15 s above the largest known wall of the stage (rehearsal, local test, validations, HEAD runs of the same cut).
 STAGE_TIMEOUT_BUILD_DEFAULT=153
-STAGE_TIMEOUT_TEST_DEFAULT=558
+STAGE_TIMEOUT_TEST_DEFAULT=581
 ENERGY_STAGE_TIMEOUT_BUILD_S="${ENERGY_STAGE_TIMEOUT_BUILD_S:-$STAGE_TIMEOUT_BUILD_DEFAULT}"
 ENERGY_STAGE_TIMEOUT_TEST_S="${ENERGY_STAGE_TIMEOUT_TEST_S:-$STAGE_TIMEOUT_TEST_DEFAULT}"
 STAGE_TIMEOUT_EXIT=91
